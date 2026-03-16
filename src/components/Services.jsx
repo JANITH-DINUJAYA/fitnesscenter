@@ -1,41 +1,27 @@
-import s1 from "../assets/service1.jpg"
-import s2 from "../assets/service2.jpg"
-import s3 from "../assets/service3.jpg"
-import s4 from "../assets/service4.jpg"
+const s1 = "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=1200&auto=format&fit=crop"; // 1 on 1 Training
+const s2 = "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?q=80&w=1200&auto=format&fit=crop"; // Elderly/Pro Training
+const s3 = "https://images.unsplash.com/photo-1526506118085-60ce8714f8c5?q=80&w=1200&auto=format&fit=crop"; // Crossover/Bodybuilding
+const s4 = "https://images.unsplash.com/photo-1541534741688-6078c6bfb5c5?q=80&w=1200&auto=format&fit=crop"; // Body Conditioning
 
 function Services() {
+  const serviceData = [
+    { img: s1, title: "1 On 1 Training" },
+    { img: s2, title: "Elderly Training" },
+    { img: s3, title: "Crossover Training" },
+    { img: s4, title: "Body Conditioning Training" }
+  ];
+
   return (
     <section className="services">
       <div className="service-grid">
-        
-        <div className="service-card">
-          <img src={s1} alt="1 On 1 Training" />
-          <div className="card-overlay">
-            <h2>1 On 1 Training</h2>
+        {serviceData.map((service, index) => (
+          <div className="service-card" key={index}>
+            <img src={service.img} alt={service.title} />
+            <div className="card-overlay">
+              <h2>{service.title}</h2>
+            </div>
           </div>
-        </div>
-
-        <div className="service-card">
-          <img src={s2} alt="Elderly Training" />
-          <div className="card-overlay">
-            <h2>Elderly Training</h2>
-          </div>
-        </div>
-
-        <div className="service-card">
-          <img src={s3} alt="Crossover Training" />
-          <div className="card-overlay">
-            <h2>Crossover Training</h2>
-          </div>
-        </div>
-
-        <div className="service-card">
-          <img src={s4} alt="Body Conditioning Training" />
-          <div className="card-overlay">
-            <h2>Body Conditioning Training</h2>
-          </div>
-        </div>
-
+        ))}
       </div>
     </section>
   );

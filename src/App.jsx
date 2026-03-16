@@ -1,5 +1,6 @@
 import Navbar from "./components/Navbar"
 import Hero from "./components/Hero"
+import About from "./components/About";
 import Philosophy from "./components/philosophy"
 import Services from "./components/Services"
 import Testimonial from "./components/Testimonial"
@@ -12,6 +13,7 @@ return(
 <>
 <Navbar/>
 <Hero/>
+<About/>
 <Philosophy/>
 <Services/>
 <Testimonial/>
