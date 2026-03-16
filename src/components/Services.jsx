@@ -5,35 +5,39 @@ import s4 from "../assets/service4.jpg"
 
 function Services() {
   return (
-
     <section className="services">
-
       <div className="service-grid">
-
+        
         <div className="service-card">
-          <img src={s1}/>
-          <h2>1 On 1 Training</h2>
+          <img src={s1} alt="1 On 1 Training" />
+          <div className="card-overlay">
+            <h2>1 On 1 Training</h2>
+          </div>
         </div>
 
         <div className="service-card">
-          <img src={s2}/>
-          <h2>Elderly Training</h2>
+          <img src={s2} alt="Elderly Training" />
+          <div className="card-overlay">
+            <h2>Elderly Training</h2>
+          </div>
         </div>
 
         <div className="service-card">
-          <img src={s3}/>
-          <h2>Crossover Training</h2>
+          <img src={s3} alt="Crossover Training" />
+          <div className="card-overlay">
+            <h2>Crossover Training</h2>
+          </div>
         </div>
 
         <div className="service-card">
-          <img src={s4}/>
-          <h2>Body Conditioning Training</h2>
+          <img src={s4} alt="Body Conditioning Training" />
+          <div className="card-overlay">
+            <h2>Body Conditioning Training</h2>
+          </div>
         </div>
 
       </div>
-
     </section>
-
   );
 }
 
