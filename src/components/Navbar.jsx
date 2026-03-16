@@ -1,15 +1,36 @@
-import React from "react";
+import logo from "../assets/logo.png";
 
-function Navbar() {
+function Navbar({ toggleTheme, theme }) {
   return (
     <nav className="navbar">
-      <h2>Fitness Center</h2>
+
+      {/* LOGO */}
+      <div className="logo">
+        <img src={logo} alt="Fitness Logo" />
+      </div>
+
+      {/* MENU */}
       <ul>
         <li>Home</li>
-        <li>About</li>
+        <li>About Us</li>
         <li>Services</li>
-        <li>Contact</li>
+        <li>Gallery</li>
+
+        {/* THEME TOGGLE */}
+        <li>
+          <button 
+            onClick={toggleTheme} 
+            className="theme-toggle" 
+            aria-label="Toggle theme"
+          >
+            {theme === "dark" ? "☀️" : "🌙"}
+          </button>
+        </li>
       </ul>
+
+      {/* CTA BUTTON */}
+      <button className="talk-btn">Talk To Us</button>
+
     </nav>
   );
 }

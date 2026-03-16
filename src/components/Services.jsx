@@ -1,32 +1,39 @@
-import React from "react";
+import s1 from "../assets/service1.jpg"
+import s2 from "../assets/service2.jpg"
+import s3 from "../assets/service3.jpg"
+import s4 from "../assets/service4.jpg"
 
 function Services() {
   return (
+
     <section className="services">
 
-      <h2>Our Services</h2>
+      <div className="service-grid">
 
-      <div className="service-container">
-
-        <div className="card">
-          <h3>1 On 1 Training</h3>
+        <div className="service-card">
+          <img src={s1}/>
+          <h2>1 On 1 Training</h2>
         </div>
 
-        <div className="card">
-          <h3>Elderly Training</h3>
+        <div className="service-card">
+          <img src={s2}/>
+          <h2>Elderly Training</h2>
         </div>
 
-        <div className="card">
-          <h3>Crossover Training</h3>
+        <div className="service-card">
+          <img src={s3}/>
+          <h2>Crossover Training</h2>
         </div>
 
-        <div className="card">
-          <h3>Body Conditioning</h3>
+        <div className="service-card">
+          <img src={s4}/>
+          <h2>Body Conditioning Training</h2>
         </div>
 
       </div>
 
     </section>
+
   );
 }
 
