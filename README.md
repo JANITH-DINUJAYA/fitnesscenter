@@ -2,6 +2,8 @@ Fitness Center Webpage built with React and Vite.
 
 View the live project here:https://fitnesscenter-xi.vercel.app/
 
+Figma Design Link:https://www.figma.com/design/aCFDRC1OLGXfdcup0aoP2h/Untitled?node-id=1-22&t=2RfEQYL0v2i2e6vl-1
+
 Tech Stack: React.js
 Deployment:Vercel
 Styling:Bluestrap CSS
