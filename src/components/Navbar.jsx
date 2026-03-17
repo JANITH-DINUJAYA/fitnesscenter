@@ -1,40 +1,46 @@
+import { useState } from "react";
 import logo from "../assets/logo.png";
-import { HashLink as Link } from 'react-router-hash-link';
+import { HashLink as Link } from "react-router-hash-link";
 
 function Navbar({ toggleTheme, theme }) {
+  const [menuOpen, setMenuOpen] = useState(false);
+
   return (
     <nav className="navbar">
 
-      {/* LOGO - Now points back to home properly */}
+      {/* LOGO */}
       <div className="logo">
         <Link smooth to="/#home">
           <img src={logo} alt="Fitness Logo" />
         </Link>
       </div>
 
-      {/* MENU */}
-      <ul>
-        {/* ADDED "/" BEFORE THE "#" TO ALL HOME LINKS */}
-        <li><Link smooth to="/#home">Home</Link></li>
-        <li><Link smooth to="/#about">About Us</Link></li>
-        <li><Link smooth to="/#services">Services</Link></li>
-        
-        {/* Gallery is a direct route */}
-        <li><Link to="/gallery">Gallery</Link></li>
+      {/* HAMBURGER MENU ICON */}
+      <div 
+        className={`menu-icon ${menuOpen ? "open" : ""}`} 
+        onClick={() => setMenuOpen(!menuOpen)}
+      >
+        ☰
+      </div>
 
-        {/* THEME TOGGLE */}
+      {/* MENU */}
+      <ul className={menuOpen ? "active" : ""}>
+        <li><Link smooth to="/#home" onClick={() => setMenuOpen(false)}>Home</Link></li>
+        <li><Link smooth to="/#about" onClick={() => setMenuOpen(false)}>About Us</Link></li>
+        <li><Link smooth to="/#services" onClick={() => setMenuOpen(false)}>Services</Link></li>
+        <li><Link to="/gallery" onClick={() => setMenuOpen(false)}>Gallery</Link></li>
+
         <li>
           <button 
             onClick={toggleTheme} 
-            className="theme-toggle" 
-            aria-label="Toggle theme"
+            className="theme-toggle"
           >
             {theme === "dark" ? "☀️" : "🌙"}
           </button>
         </li>
       </ul>
 
-      {/* CTA BUTTON / LINK - Also needs the "/" prefix */}
+      {/* CTA */}
       <Link smooth to="/#contact" className="talk-btn">
         Talk To Us
       </Link>

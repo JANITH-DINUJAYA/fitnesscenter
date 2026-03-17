@@ -137,7 +137,13 @@ html {
   cursor: pointer;
   color: var(--text-main);
 }
-
+.menu-icon {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+  color: var(--text-main);
+  z-index: 1100;
+}
 .talk-btn {
   text-decoration: none !important;
   display: inline-block;
@@ -789,15 +795,16 @@ address {
   color: var(--text-faint);
 }
 
-/* =========================================
-   MOBILE RESPONSIVENESS
-   ========================================= */
 @media (max-width: 768px) {
   .hero {
     padding-left: 20px;
     text-align: center;
     justify-content: center;
   }
+  .menu-icon {
+    display: block;
+  }
+
 
   .hero-text h1 {
     font-size: 45px;
