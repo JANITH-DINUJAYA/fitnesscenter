@@ -1,7 +1,7 @@
-const s1 = "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=1200&auto=format&fit=crop"; // 1 on 1 Training
-const s2 = "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?q=80&w=1200&auto=format&fit=crop"; // Elderly/Pro Training
-const s3 = "https://images.unsplash.com/photo-1526506118085-60ce8714f8c5?q=80&w=1200&auto=format&fit=crop"; // Crossover/Bodybuilding
-const s4 = "https://images.unsplash.com/photo-1541534741688-6078c6bfb5c5?q=80&w=1200&auto=format&fit=crop"; // Body Conditioning
+const s1 = "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=1200&auto=format&fit=crop"; 
+const s2 = "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?q=80&w=1200&auto=format&fit=crop"; 
+const s3 = "https://images.unsplash.com/photo-1526506118085-60ce8714f8c5?q=80&w=1200&auto=format&fit=crop"; 
+const s4 = "https://images.unsplash.com/photo-1541534741688-6078c6bfb5c5?q=80&w=1200&auto=format&fit=crop"; 
 
 function Services() {
   const serviceData = [
@@ -12,7 +12,8 @@ function Services() {
   ];
 
   return (
-    <section className="services">
+    /* ADDED ID HERE */
+    <section className="services" id="services"> 
       <div className="service-grid">
         {serviceData.map((service, index) => (
           <div className="service-card" key={index}>

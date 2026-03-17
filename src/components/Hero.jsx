@@ -3,7 +3,8 @@ import hero from "../assets/hero.jpeg";
 function Hero() {
   return (
     <section
-      className="hero"
+      className="hero" 
+      id="home" /* ADDED THIS ID */
       style={{ backgroundImage: `url(${hero})` }}
     >
       <div className="hero-text">
