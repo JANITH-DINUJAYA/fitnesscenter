@@ -824,6 +824,9 @@ address {
   gap: 30px;
   transition: 0.4s ease;
 }
+ .navbar ul.active {
+    left: 0;
+  }
 
   .service-grid {
     grid-template-columns: 1fr;
