@@ -8,7 +8,7 @@ function AboutUs() {
         <div className="about-image">
           <img src={aboutImg} alt="Our Fitness Center" />
           <div className="experience-badge">
-            <span className="years">10+</span>
+            <span className="years">1+</span>
             <span className="text">Years of Experience</span>
           </div>
         </div>
